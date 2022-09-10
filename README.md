@@ -1,22 +1,45 @@
-# cra-template-tailwindcss-typescript
+### Introduction
 
-A streamlined [Tailwind CSS v3.1](https://tailwindcss.com) template for [Create React App](https://github.com/facebook/create-react-app) in [TypeScript](https://www.typescriptlang.org/).
+In this document I will be explaining some of the important decisions I have taken during the execution of this work as well as provide some good documentation about my completed solution.
 
-> This template installs and sets up [Tailwind CSS](https://tailwindcss.com) with TypeScript support.
+## Features
 
-## Usage
+I have been able to do a rebuild of the current Payhippo sign up flow bearing in mind the key attributes of the average customer given ;
+
+- Older
+- Business-oriented
+- Enjoy simple on-boarding flows
+- Mix of both savvy and non-tech savvy users
+- Most use mobile
+
+Therefore I have reduced the number of steps involved in the regisytration process to make it more easier to be quickly done with as well as ensure it is responsive as a good number of users make use of mobile devices.
+
+### Built With
+
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [Jest](https://jestjs.io/)
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+
+### Key Decisions taken
+- 
+
+
+### Future Improvements ( if I had more time )
+
+- I intend to add form/input validation to all the input fields using libraries like yup, formik etc.
+
+## How To Use
 
 ```bash
-npx create-react-app --template tailwindcss-typescript
+
+# Install dependencies
+$ npm i
+
+# Run the app
+$ npm run start
+
+# Run tests
+$ npm run test
 ```
-
-## Credits
-
-This project was made possible thanks to the following projects.
-
-1. [GeoffSelby/cra-template-tailwindcss](https://github.com/GeoffSelby/cra-template-tailwindcss) - A streamlined Tailwind CSS template for Create React App (in JavaScript).
-2. [cra-template-typescript](https://github.com/facebook/create-react-app/tree/master/packages/cra-template-typescript) - An official TypeScript template for create-react-app.
-
-## License
-
-MIT © [Sung M. Kim](https://sung.codes)
