@@ -7,15 +7,16 @@ type InputProps = {
     endAdornment?: React.ReactNode;
     id?: string;
     label?: string;
+    errorText?: string;
 } & React.ComponentProps<'input'>
 
-const Input = ({ className, containerClassName, startAdornment, endAdornment, id, label, ...rest }: InputProps) => {
+const Input = ({ className, containerClassName, startAdornment, endAdornment, id, label, errorText, ...rest }: InputProps) => {
 
     return (
-        <div>
+        <div className={containerClassName}>
             { label ? <label htmlFor={id}>{label}</label> : '' }
             <div className={`flex items-center py-2 px-3 border border-gray-300 hover:border-blue-b1 rounded-lg
-            cursor-pointer mt-1 ${containerClassName}`}
+            cursor-pointer mt-1`}
             >
                 {startAdornment ? <div>{startAdornment}</div> : ''}
                 <input
@@ -25,6 +26,7 @@ const Input = ({ className, containerClassName, startAdornment, endAdornment, id
                 />
                 {endAdornment ? <div>{endAdornment}</div> : ''}
             </div>
+            <p className='text-red-400 my-2'>{errorText ? errorText : ''}</p>
         </div>
     )
 }

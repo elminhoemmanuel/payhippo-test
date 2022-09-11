@@ -7,13 +7,14 @@ type SelectProps = {
     id?: string;
     label?: string;
     options: string[];
+    errorText?: string;
 } & React.ComponentProps<'select'>
 
-const Select = ({ className, startAdornment, id, label, options, containerClassName, ...rest }: SelectProps) => {
+const Select = ({ className, startAdornment, id, label, options, containerClassName, errorText, ...rest }: SelectProps) => {
 
     return (
         <div>
-            <label htmlFor={id}>{label}</label>
+            { label ? <label htmlFor={id}>{label}</label> : '' }
             <div className={`flex items-center py-2 px-3 border border-gray-300 hover:border-blue-b1 rounded-lg
                 cursor-pointer mt-1 ${containerClassName}`}
             >
@@ -29,6 +30,7 @@ const Select = ({ className, startAdornment, id, label, options, containerClassN
                     }
                 </select>
             </div>
+            <p className='text-red-400 my-2'>{errorText ? errorText : ''}</p>
         </div>
     )
 }
