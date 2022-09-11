@@ -2,7 +2,7 @@ import { createContext, useState } from 'react';
 import { CustomerType, IRegisterContext } from '../interfaces/register';
 
 type RegisterContextProviderProps = {
-    children: React.ReactNode
+    children: React.ReactNode;
 }
 
 export const RegisterContext = createContext<IRegisterContext | null>(null);

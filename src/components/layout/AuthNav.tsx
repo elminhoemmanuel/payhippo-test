@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { RegisterContext } from '../../context/RegisterContext';
 import { IRegisterContext } from '../../interfaces/register';
 import ProgressBar from '../common/ProgressBar';
-import SecondaryButton from '../common/SecondaryButton';
+import SecBtn from '../common/SecBtn';
 import Back from '../icons/Back';
 
 const AuthNav = () => {
@@ -16,10 +16,10 @@ const AuthNav = () => {
                 <img className='block h-12 w-30' src='/images/payhippo_logo.svg' alt='payhippo logo' />
                 {
                     step > 1 ? 
-                    <SecondaryButton onClick={()=>decrStep()} className='flex items-center text-blue-b1'>
+                    <SecBtn onClick={()=>decrStep()} className='flex items-center text-blue-b1'>
                         <Back className='h-5 w-5 mr-2' />
                         <p>Back</p>
-                    </SecondaryButton> :
+                    </SecBtn> :
                     ''
                 }
             </nav>

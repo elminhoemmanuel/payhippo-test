@@ -1,11 +1,11 @@
 import React from 'react';
 
-type SecondaryButtonProps = {
+type SecBtnProps = {
     children: React.ReactNode;
     className?: string;
 } & Omit<React.ComponentProps<"button">, "children">
 
-const SecondaryButton = ({ children, className, ...rest }: SecondaryButtonProps) => {
+const SecBtn = ({ children, className, ...rest }: SecBtnProps) => {
 
     return (
         <button className={`p-2 bg-transparent rounded hover:bg-blue-50 ${className}`} {...rest}>
@@ -14,4 +14,4 @@ const SecondaryButton = ({ children, className, ...rest }: SecondaryButtonProps)
     )
 }
 
-export default SecondaryButton
+export default SecBtn

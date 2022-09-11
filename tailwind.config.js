@@ -10,6 +10,7 @@ module.exports = {
                 },
                 skyblue: {
                     s1: "#EFF6FF",
+                    s2: "#AAB6E5",
                 },
                 powderlue: {
                     p1: "#AAB6E5",
