@@ -26,7 +26,7 @@ const Input = ({ className, containerClassName, startAdornment, endAdornment, id
                 />
                 {endAdornment ? <div>{endAdornment}</div> : ''}
             </div>
-            <p className='text-red-400 my-2'>{errorText ? errorText : ''}</p>
+            <p data-testid="error" className='text-red-400 my-2'>{errorText ? errorText : ''}</p>
         </div>
     )
 }

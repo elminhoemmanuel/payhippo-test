@@ -5,7 +5,7 @@ type RegisterContextProviderProps = {
     children: React.ReactNode;
 }
 
-export const RegisterContext = createContext<IRegisterContext | null>(null);
+export const RegisterContext = createContext<IRegisterContext>({} as IRegisterContext);
 
 export const RegisterContextProvider = ({ children }: RegisterContextProviderProps) => {
 
@@ -25,7 +25,11 @@ export const RegisterContextProvider = ({ children }: RegisterContextProviderPro
 
     const incrStep = () => setStep((prev) => prev + 1);
     const decrStep = () => setStep((prev) => prev - 1);
-    const resetStep = () => setStep(1);
+    const resetStep = () => {
+        setPhoneValues({ phone: "", otp: "" });
+        setDetails(initialDetails);
+        setStep(1);
+    };
     const handleType = (val: CustomerType) => setType(val);
     const handlePhoneValues = (val: IPhoneValues) => setPhoneValues(val);
     const handleDetails = (val: IDetails) => setDetails(val);
